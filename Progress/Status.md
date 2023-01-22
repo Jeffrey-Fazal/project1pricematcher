@@ -11,3 +11,5 @@ rails generate model Product -p
       invoke  active_record
       create    db/migrate/20230122224043_create_products.rb
       create    app/models/product.rb
+
+rails generate model Product

@@ -1,0 +1,4 @@
+email,product_id,category_id,password_digest,role,role_identifier
+catchallogin+admin@gmail.com,,,chicken,admin,1
+catchallogin+store@gmail.com,,,chicken,store,2
+catchallogin+subscriber@gmail.com,,,chicken,subscriber,3
