@@ -2,19 +2,33 @@
 
 ```mermaid
 classDiagram
-    products --|> categories
-    products <|--|> stores
-    users <|--|> products :has_many products
-    users <|--|> product_categories :has_many categories
-    users <|--|> stores 
+    direction LR
+    products --|> categories :belongs_to
+    products <|--|> stores :has_many
+    users <|--|> products :has_many 
+    users <|--|> categories :has_many 
+    users <|--|> stores :has_many 
+
+    products .. product_stores :join table
+    stores .. product_stores :join table
+
+    users .. users_products :join table
+    users_products .. products :join table
+
+    users .. categories_users :join table
+    categories_users .. categories :join table
+
+    users .. stores_users :join table
+    stores_users .. stores :join table
 
     class products {
-      t.integer :product_id  
+      t.integer :product_id
+      t.text :name  
       t.text :title 
       t.text :rrp
       t.text :series
       t.text :brand 
-      t.text :category_id
+      t.integer :category_id
       t.text :price_cheaptest
       t.text :sku
       t.text :photo
@@ -22,17 +36,15 @@ classDiagram
       t.text :rating
       t.text :description
       t.text :store_name_price
-
     }
     class categories {
       t.integer :category_id
       t.text :name
       t.text :desciption
       t.text :image
-
     }
     class stores {
-      t.integer :store_slug
+      t.text :store_slug
       t.text :name
       t.text :logo
       t.integer :phone
@@ -40,16 +52,30 @@ classDiagram
       t.boolean :sponsor
     }
     class users {
-      t.text :user_id
+      t.integer :user_id
       t.text :email
-      t.text :product_id
-      t.text :category_id
-      t.text :role
-      t.datetime created_at, null: false
-      t.datetime updated_at, null: false
+      t.integer :product_id
+      t.integer :category_id
+      t.text :role_identifier
       t.string :password_digest
-      t.boolean :role
     }
+    class users_products {
+      t.integer :product_id
+      t.text :user_id
+    }
+    class categories_users {
+      t. integer :category_id
+      t. integer :user_id
+    }
+    class stores_users{
+      t.integer :user_id
+      t.integer :store_id
+    }
+    class product_stores{
+      t.integer :store_id
+      t.integer :product_id
+    }
+
 ```
 ## products
 * store_name_price
