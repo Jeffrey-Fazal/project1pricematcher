@@ -22,13 +22,13 @@ classDiagram
     stores_users .. stores :join table
 
     class products {
-      t.integer :product_id
+      t.integer :pdt_id
       t.text :name  
       t.text :title 
       t.text :rrp
       t.text :series
       t.text :brand 
-      t.integer :category_id
+      t.integer :cat_id
       t.text :price_cheaptest
       t.text :sku
       t.text :photo
@@ -38,7 +38,7 @@ classDiagram
       t.text :store_name_price
     }
     class categories {
-      t.integer :category_id
+      t.integer :cat_id
       t.text :name
       t.text :desciption
       t.text :image
@@ -52,28 +52,28 @@ classDiagram
       t.boolean :sponsor
     }
     class users {
-      t.integer :user_id
+      t.integer :usr_id
       t.text :email
-      t.integer :product_id
-      t.integer :category_id
+      t.integer :pdt_id
+      t.integer :cat_id
       t.text :role_identifier
       t.string :password_digest
     }
     class users_products {
-      t.integer :product_id
-      t.text :user_id
+      t.integer :pdt_id
+      t.text :usr_id
     }
     class categories_users {
-      t. integer :category_id
-      t. integer :user_id
+      t. integer :cat_id
+      t. integer :usr_id
     }
     class stores_users{
-      t.integer :user_id
+      t.integer :usr_id
       t.integer :store_id
     }
     class product_stores{
       t.integer :store_id
-      t.integer :product_id
+      t.integer :pdt_id
     }
 
 ```

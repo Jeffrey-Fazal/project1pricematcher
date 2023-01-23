@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Pricematchthree</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
+<head>
+  <title>Pricematchthree</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %> 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+<div class='container'>
+
+<%= yield %>
+
+<footer>
+<%= link_to "Legal" , pages_terms_path %> |
+<%= link_to "About Us" , pages_about_path %> |
+<%= link_to "Contact" , pages_contact_path %> |
+<%= link_to "Subscribe" , pages_subscribe_path %>
+</footer>
+</div>
+</body>
+
 </html>
