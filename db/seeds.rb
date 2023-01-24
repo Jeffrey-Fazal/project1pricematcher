@@ -28,7 +28,7 @@ csv_text = File.read(Rails.root.join('lib', 'seeds', 'categoryseeds.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
   t = Category.new
-  t.cat_id  = row['category_id'] 
+  # t.cat_id  = row['category_id'] 
   t.name  = row['name']
   t.desciption  = row['desciption']
   t.image  = row['image']
