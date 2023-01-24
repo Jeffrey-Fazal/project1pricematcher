@@ -4,7 +4,7 @@ Product.destroy_all
 p 'destory all products'
 csv_text_products = File.read(Rails.root.join('lib', 'seeds', 'productseeds.csv'))
 csv_products = CSV.parse(csv_text_products , :headers => true, :encoding => 'ISO-8859-1')
-csv.each do |row|
+csv_products.each do |row|
   t = Product.new
   t.name = row['name']
   # t.pdt_id = row['product_id']
