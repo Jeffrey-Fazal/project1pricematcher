@@ -2,8 +2,8 @@ require 'csv'
 
 Product.destroy_all
 p 'destory all products'
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'productseeds.csv'))
-csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+csv_text_products = File.read(Rails.root.join('lib', 'seeds', 'productseeds.csv'))
+csv_products = CSV.parse(csv_text_products , :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
   t = Product.new
   t.name = row['name']
@@ -24,22 +24,22 @@ csv.each do |row|
 end
 Category.destroy_all
 # product_categories
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'categoryseeds.csv'))
-csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
-csv.each do |row|
+csv_text_category = File.read(Rails.root.join('lib', 'seeds', 'categoryseeds.csv'))
+csv_categories = CSV.parse(csv_text_category, :headers => true, :encoding => 'ISO-8859-1')
+csv_categories.each do |row|
   t = Category.new
   # t.cat_id  = row['category_id'] 
   t.name  = row['name']
   t.desciption  = row['desciption']
   t.image  = row['image']
   t.save
-  puts "#{t.cat_id}, #{t.name} saved"
+  puts "#{t.name}, #{t.name} saved"
 end
 
 # stores
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'stores.csv'))
-csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
-csv.each do |row|
+csv_text_stores = File.read(Rails.root.join('lib', 'seeds', 'stores.csv'))
+csv_stores = CSV.parse(csv_text_stores, :headers => true, :encoding => 'ISO-8859-1')
+csv_stores.each do |row|
   t = Store.new 
   t.store_slug  = row['store_slug']
   t.name  = row['name']

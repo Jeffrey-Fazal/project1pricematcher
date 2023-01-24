@@ -13,6 +13,20 @@
 * Model views/controllers for testing stores (index page)
 * Create show pages for product/categories and stores.
 
+# Heroku Commands
+
+git status
+
+ git push heroku
+
+ heroku run rails db:migrate
+ heroku run rails db:seed
+
+
+ heroku open
+ 
+
+
 # Scrap Book
  
  
@@ -174,3 +188,85 @@ Running via Spring preloader in process 44245
       invoke  active_record
       create    db/migrate/20230124004336_create_users.rb
       create    app/models/user.rb
+
+ 5510  rails generate controller Users new -p
+ 5511  rails generate controller Users new
+ 5512  rails generate migration add_password_digest_to_users password_digest:string
+ 5513  rails db:migrate
+ 5514  rails generate controller Users new
+ 5515  rails db:migrate
+ 5516  rails db
+ 5517  rails generate migration Users
+ 5518  rm db/migrate/20230124003506_users.rb
+ 5519  gaj
+ 5520  cd 04-rails/tunr/
+ 5521  ls
+ 5522  code .
+ 5523  rails g model User username:string password_digest:string -p
+ 5524  rails g model User username:string password_digest:string
+ 5525  rails s -p 3030
+ 5526  rails db:migrate
+ 5527  rails generate migration add_password_digest_to_users password_digest:string
+ 5528  rails db:migrate
+ 5529  rails s
+ 5530  clear
+ 5531  rails db
+ 5532  rails generate migration add_email_to_users email:string
+ 5533  rake db:migrate
+ 5534  rclone
+ 5535  rclone config
+ 5536  clear
+ 5537  rails db
+ 5538  \q
+ 5539  rails console
+ 5540  curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+ 5541  heroku --version
+ 5542  heroku login
+ 5543  git add .
+ 5544  git commit -m "fixing login\n"
+ 5545  git push
+ 5546  heroku stack:set heroku-20
+ 5547  p1
+ 5548  cd pricematchthree/
+ 5549  clear
+ 5550  ls
+ 5551  git remote add origin git@github.com:Jeffrey-Fazal/project1pricematcher.git\ngit branch -M main\ngit push -u origin main
+ 5552  git add .
+ 5553  git commit -m "pre deploy test"
+ 5554  heroku create projectpricematcher
+ 5555  heroku stack:set heroku-20
+ 5556  git config --list | grep heroku
+ 5557  git push heroku main
+ 5558  npm install --global yarn
+ 5559  sudo npm install --global yarn
+ 5560  git push heroku main
+ 5561  bundle install
+ 5562  nano Gemfile
+ 5563  code Gemfile
+ 5564  bundle install
+ 5565  git push heroku main
+ 5566  git status
+ 5567  git add .
+ 5568  git commit -m "changed gem file and production enviroment"
+ 5569  git status
+ 5570  git push heroku main
+ 5571  p1code
+ 5572  heroku open
+ 5573  heroku run rails db:migrate
+ 5574  heroku run rails db:seed
+ 5575  git add .
+ 5576  git commit "removed cat id from seeds"
+ 5577  git commit -m "removed cat id from seeds"
+ 5578  git push origin
+ 5579  git push heroku
+ 5580  heroku open
+ 5581  git status
+ 5582  git status heroku
+ 5583  gahw
+ 5584  cd ..
+ 5585  cd .
+ 5586  cd ..
+ 5587  ls
+ 5588  p1
+ 5589  cd pricematchthree/
+ 5590  clear
