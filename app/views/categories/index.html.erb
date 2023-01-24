@@ -1,8 +1,7 @@
 <h1>All Categories</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
 
-<h1>All Categories</h1>
-
+<p>View all the categories</p>
+ 
 <% @categories.each do |category| %>
-    <p>Name: <%= category.name %></p>
+    <p>Name: <%= link_to category.name, category %></p>
 <% end %>

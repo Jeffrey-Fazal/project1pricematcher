@@ -4,5 +4,6 @@ class StoreController < ApplicationController
   end
 
   def show
+    @stores = Store.find params[:id]
   end
 end

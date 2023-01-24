@@ -1,11 +1,13 @@
+# TO DO
+* Create show pages for product/categories and stores.
+* User sessions and ability to save products
+* First join table migration 
+
 # Completed
 * Product migration
 * Category migration
-* Models views and controllers for testing products/categories
-
-
-# TO DO
-* First join table migration  
+* Models views/controllers for testing products/categories (index page)
+* Model views/controllers for testing stores (index page)
 
 # Scrap Book
  
@@ -145,4 +147,4 @@ Running via Spring preloader in process 509024
       create      app/assets/stylesheets/store.scss
 * pending git commit
 * first migration
-rails generate migration AddProductIdToCategories product_id:integer
+rails generate migration AddProductIdToProductCategories product_id:integer

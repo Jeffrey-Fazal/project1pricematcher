@@ -11,6 +11,12 @@
 
 <body>
 <div class='container'>
+<nav>
+<%= link_to "Home", root_path %> |
+<%= link_to "All Products" ,  products_path %> |
+<%= link_to "All Categories" , categories_path %> |
+<%= link_to "All Stores" ,  store_index_path %> |
+</nav>
 
 <%= yield %>
 
