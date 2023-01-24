@@ -1,6 +1,6 @@
 # TO DO
 
-* User sessions and ability to save products
+* User ability to save products
 * API show alternative price
 * First join table migration
 * map products and categories
@@ -13,22 +13,26 @@
 * Model views/controllers for testing stores (index page)
 * Create show pages for product/categories and stores.
 
+# rails console commands
+Product.last.category
+Category.last.products
+
+user.update :password => 'chicken'
+
 # Heroku Commands
 
 git status
 
- git push heroku
+git push heroku
 
- heroku run rails db:migrate
- heroku run rails db:seed
+heroku run rails db:migrate
+heroku run rails db:seed
 
-
- heroku open
+heroku open
  
 
 
 # Scrap Book
- 
  
  5248  rails new pricematchthree -T --database=postgresql
  5250  bundle 

@@ -1,3 +1,3 @@
 class Product < ApplicationRecord
-    # has_many categories
+    belongs_to :category, :optional => true
 end
