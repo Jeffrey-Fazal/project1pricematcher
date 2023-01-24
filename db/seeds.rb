@@ -46,7 +46,7 @@ csv_products.each do |row|
 end
 
 
-# stores
+Store.destroy_all
 csv_text_stores = File.read(Rails.root.join('lib', 'seeds', 'stores.csv'))
 csv_stores = CSV.parse(csv_text_stores, :headers => true, :encoding => 'ISO-8859-1')
 csv_stores.each do |row|

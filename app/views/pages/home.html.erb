@@ -1,2 +1,7 @@
 <h1>Welcome to PriceMatcher</h1>
 <p>Find the best deals from legit stores.</p>
+
+
+<% @products.each do |product| %>
+    <p>Name: <%= link_to product.name,  product %></p>
+<% end %>
