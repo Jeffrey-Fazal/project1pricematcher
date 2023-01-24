@@ -1,5 +1,5 @@
 # TO DO
-* Create show pages for product/categories and stores.
+
 * User sessions and ability to save products
 * First join table migration 
 
@@ -8,6 +8,7 @@
 * Category migration
 * Models views/controllers for testing products/categories (index page)
 * Model views/controllers for testing stores (index page)
+* Create show pages for product/categories and stores.
 
 # Scrap Book
  
