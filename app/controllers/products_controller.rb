@@ -7,4 +7,13 @@ class ProductsController < ApplicationController
   def show
     @products = Product.find params[:id]
   end
+
+  def search
+    if params[:search].blank?
+      else
+      @parameter = params[:search]
+      @searchedfor = params[:search]
+      @results = Product.all.where("name LIKE :search", search: "%#{@parameter}%")
+      end
+    end
 end

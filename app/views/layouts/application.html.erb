@@ -11,29 +11,92 @@
 
 <body>
 <nav>
-<%= link_to "Home", root_path %> |
-<%= link_to "All Products" ,  products_path %> |
-<%= link_to "All Categories" , categories_path %> |
-<%= link_to "All Stores" ,  store_index_path %> |
+<header class="p-3 text-bg-dark">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+      </a>
 
-<% if @current_user.present? %>
-  <%= link_to "Sign out #{ @current_user.email }", login_path, :method => 'delete' %>
-<% else %>
-  <%= link_to 'Sign up', new_user_path %> |
-  <%= link_to 'Sign in', login_path %> |
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><%= link_to "Home", root_path, class: "nav-link px-2 text-secondary" %></li>
+        <li><%= link_to "All Products" ,  products_path, class: "nav-link px-2 text-white" %></li>
+        <li><%= link_to "All Categories" , categories_path, class: "nav-link px-2 text-white" %></li>
+        <li><%= link_to "All Stores" ,  store_index_path, class: "nav-link px-2 text-white" %> </li>
+      </ul>
+
+      <div class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+        <%= form_tag(search_path, :method => "get") do %>
+    <div class="input-group">
+    <%= search_field_tag :search, params[:search], placeholder: "Search Products", class: "form-control form-control-dark text-bg-dark" %>
+    </div>
 <% end %>
-<hr>
-</nav>
+      </div>
 
+      <div class="text-end">
+        <%= link_to 'Sign in', login_path, class: "btn btn-outline-light me-2" %> 
+        <%= link_to 'Sign Up', new_user_path, class: "btn btn-warning" %> 
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container">
 <%= yield %>
+</div>
+  <footer class="py-5">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+        </ul>
+      </div>
 
-<footer>
-<hr>
-<%= link_to "Legal" , pages_terms_path %> |
-<%= link_to "About Us" , pages_about_path %> |
-<%= link_to "Contact" , pages_contact_path %> |
-<%= link_to "Subscribe" , pages_subscribe_path %>
-</footer>
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><%= link_to "Subscribe" , pages_subscribe_path, class: "nav-link p-0 text-muted" %></li>
+          <li class="nav-item mb-2"><%= link_to "About Us" , pages_about_path, class: "nav-link p-0 text-muted" %> </li>
+          <li class="nav-item mb-2"><%= link_to "Contact" , pages_contact_path, class: "nav-link p-0 text-muted" %></li>
+          <li class="nav-item mb-2"><%= link_to "Legal" , pages_terms_path, class: "nav-link p-0 text-muted" %></li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h5>Subscribe to our newsletter</h5>
+          <p>Monthly digest of what's new and exciting from us.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>&copy; 2022 Company, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
 
 </html>
