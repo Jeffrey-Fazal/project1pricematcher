@@ -1,7 +1,10 @@
 # TO DO
 
 * User sessions and ability to save products
-* First join table migration 
+* API show alternative price
+* First join table migration
+* map products and categories
+* map products and stores 
 
 # Completed
 * Product migration
@@ -149,3 +152,25 @@ Running via Spring preloader in process 509024
 * pending git commit
 * first migration
 rails generate migration AddProductIdToProductCategories product_id:integer
+
+➜  pricematchthree git:(master) rails generate controller Users new   
+Running via Spring preloader in process 40722
+      create  app/controllers/users_controller.rb
+       route  get 'users/new'
+      invoke  erb
+      create    app/views/users
+      create    app/views/users/new.html.erb
+      invoke  helper
+      create    app/helpers/users_helper.rb
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/users.coffee
+      invoke    scss
+      create      app/assets/stylesheets/users.scss
+
+
+➜  pricematchthree git:(master) ✗ rails g model User username:string password_digest:string  
+Running via Spring preloader in process 44245
+      invoke  active_record
+      create    db/migrate/20230124004336_create_users.rb
+      create    app/models/user.rb

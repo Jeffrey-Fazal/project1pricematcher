@@ -16,11 +16,23 @@
 <%= link_to "All Products" ,  products_path %> |
 <%= link_to "All Categories" , categories_path %> |
 <%= link_to "All Stores" ,  store_index_path %> |
+
+<% if @current_user.present? %>
+  <% if @current_user.admin? %>
+    <%= link_to "All users", users_path %> |
+  <% end %>
+  <%= link_to "Sign out #{ @current_user.email }", login_path, :method => 'delete' %>
+<% else %>
+  <%= link_to 'Sign up', new_user_path %> |
+  <%= link_to 'Sign in', login_path %> |
+<% end %>
+<hr>
 </nav>
 
 <%= yield %>
 
 <footer>
+<hr>
 <%= link_to "Legal" , pages_terms_path %> |
 <%= link_to "About Us" , pages_about_path %> |
 <%= link_to "Contact" , pages_contact_path %> |
