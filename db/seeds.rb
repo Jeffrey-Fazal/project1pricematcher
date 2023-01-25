@@ -37,7 +37,7 @@ csv_products.each do |row|
   t.price_cheaptest = row['price_cheaptest']
   t.sku = row['sku']
   t.photo = row['photo']
-  t.image_url = Product.apiimage(t.name)
+  t.image_url = Product.apisearch(t.name,'image')
   t.rating = row['rating']
   t.description = row['description']
   t.store_name_price = row['store_name_price']
