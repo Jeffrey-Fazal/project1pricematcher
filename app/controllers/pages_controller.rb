@@ -1,4 +1,8 @@
 class PagesController < ApplicationController
+require 'uri'
+require 'net/http'
+require 'openssl'
+
   def home
     @products = Product.all
   end
@@ -14,5 +18,4 @@ class PagesController < ApplicationController
 
   def terms
   end
-
 end
