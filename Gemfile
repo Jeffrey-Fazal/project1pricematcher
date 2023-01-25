@@ -5,6 +5,7 @@ ruby '2.7.7'
 
 # Enviromental Variables
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-heroku'
 # Instructions for customisation https://github.com/bkeepers/dotenv
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

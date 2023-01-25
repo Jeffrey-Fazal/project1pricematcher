@@ -37,12 +37,12 @@ csv_products.each do |row|
   t.price_cheaptest = row['price_cheaptest']
   t.sku = row['sku']
   t.photo = row['photo']
-  t.image_url = row['image_url']
+  t.image_url = Product.apiimage(t.name)
   t.rating = row['rating']
   t.description = row['description']
   t.store_name_price = row['store_name_price']
   t.save
-  puts "name: #{t.name } rrp:#{t.rrp} saved"
+  puts "name: #{t.name } rrp:#{t.rrp} saved with image #{t.image_url}"
 end
 
 

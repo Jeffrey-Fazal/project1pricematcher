@@ -6,8 +6,9 @@ class ProductsController < ApplicationController
   
   def show
     @products = Product.find params[:id]
-    query = @products.name  
-    Product.apisearch(query)
+    @cdec = Product.apisearch(@products.name)
+    @cpic = Product.apiimage(@products.name)
+    @cprice = Product.apiprice(@products.name)
   end
 
   def search
