@@ -9,8 +9,35 @@
 <p>rating: <%= @products.rating%></p>
 <p>description: <%= @products.description%></p>
 <p>store_name_price: <%= @products.store_name_price%></p>
-<p>API TEST: <%= @cdec %></p>
-<p>IMAGES: <%= @cpic %>
- <img src='<%= @cpic %>' alt='<%= @products.name %>' width="500" height="600"> 
-<p>API Price: <%= @cprice  %></p>
-<p>Readout: <%= @readout %> </p>
+
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
