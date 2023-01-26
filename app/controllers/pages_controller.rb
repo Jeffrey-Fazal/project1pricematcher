@@ -5,6 +5,7 @@ require 'openssl'
 
   def home
     @products = Product.all
+    @categories = Category.all
   end
 
   def about
