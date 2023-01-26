@@ -5,6 +5,7 @@
 * First join table migration
 * map products and categories
 * map products and stores 
+* favicon: https://realfavicongenerator.net/favicon/ruby_on_rails
 
 # Completed
 * Product migration
