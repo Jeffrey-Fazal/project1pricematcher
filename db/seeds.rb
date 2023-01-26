@@ -32,7 +32,6 @@ csv_products.each do |row|
   t.rrp = row['rrp']
   t.series = row['series']
   t.brand = row['brand'] 
-  # t.cat_id = row['category_id']
   t.category_id = cat_id[row['category_id']]
   t.price_cheaptest = row['price_cheaptest']
   t.sku = row['sku']
