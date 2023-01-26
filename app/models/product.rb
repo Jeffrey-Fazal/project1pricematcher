@@ -26,8 +26,8 @@ class Product < ApplicationRecord
         response_raw = api_response.read_body
         response_hash = JSON.parse response_raw.gsub('=>', ':')
         
-        if (response_hash["data"].any?)
-            num_results = response_hash["data"].size
+        if (response_hash["data"].present?)
+            # num_results = response_hash["data"].size
             if (type ==='title')
                 return @product_title = response_hash["data"][0]["product_title"] unless @product_title === !nil
             elsif (type === 'image')
@@ -46,4 +46,6 @@ class Product < ApplicationRecord
         
 end
 
-#Product.apisearch('name','type')
+# Product.apisearch('name','type')
+# name: <product name>
+# type: title, image, description and price

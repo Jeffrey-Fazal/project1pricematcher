@@ -1,6 +1,7 @@
 require 'csv'
 
 Category.destroy_all
+p 'destory and seed all categories'
 # product_categories
 csv_text_category = File.read(Rails.root.join('lib', 'seeds', 'categoryseeds.csv'))
 csv_categories = CSV.parse(csv_text_category, :headers => true, :encoding => 'ISO-8859-1')
@@ -22,7 +23,7 @@ cat_id = {
 }
 
 Product.destroy_all
-p 'destory all products'
+p 'destory and seed all products'
 csv_text_products = File.read(Rails.root.join('lib', 'seeds', 'productseeds.csv'))
 csv_products = CSV.parse(csv_text_products , :headers => true, :encoding => 'ISO-8859-1')
 csv_products.each do |row|
@@ -46,6 +47,7 @@ end
 
 
 Store.destroy_all
+p 'destory and seed all stores'
 csv_text_stores = File.read(Rails.root.join('lib', 'seeds', 'stores.csv'))
 csv_stores = CSV.parse(csv_text_stores, :headers => true, :encoding => 'ISO-8859-1')
 csv_stores.each do |row|
