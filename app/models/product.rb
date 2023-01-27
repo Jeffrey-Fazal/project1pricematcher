@@ -36,6 +36,8 @@ class Product < ApplicationRecord
                 return @api_description = response_hash["data"][0]["product_description"] unless @api_description === !nil
             elsif (type === 'price')
                 return @api_price = response_hash["data"][0]["offer"]["price"] unless @api_price === !nil
+            elsif (type ==='hash')
+                return @hash = response_hash["data"]
             else 
                 puts "invalid argument"
             end 

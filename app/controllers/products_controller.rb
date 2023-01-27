@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
   
   def show
     @products = Product.find params[:id]
+    @product_hash = Product.apisearch(@products.name , 'hash')
   end
 
   def search

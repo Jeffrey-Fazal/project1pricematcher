@@ -1,5 +1,16 @@
 <h1>All Stores</h1>
-
+<div class="row">
 <% @stores.each do |store| %>
-    <p>Store Name: <%= link_to store.name,  store %></p>
+
+<div class="col-sm">
+<div class="card" style="width: 18rem;">
+  <%= image_tag store.logo, class: "card-img-top" %>
+  <div class="card-body">
+    <h5 class="card-title"><%= store.name %></h5>
+    <p class="card-text">Talk to <%= store.name %> & find out if they'll price match</p>
+    <%= link_to store.name,  store, class: "btn btn-primary" %>
+  </div>
+</div>
+</div>
 <% end %>
+</div>
